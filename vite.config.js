@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/UXSTaft2023-DevDeptApp-BERNARDO/',
+  base: './',
   plugins: [
     vue(),
   ],
