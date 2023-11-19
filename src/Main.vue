@@ -199,8 +199,7 @@ header>div {
 }
 
 
-@media (max-width: 512px) {
-
+@media (max-width: 1024px) {
     header,
     main {
         width: auto;
