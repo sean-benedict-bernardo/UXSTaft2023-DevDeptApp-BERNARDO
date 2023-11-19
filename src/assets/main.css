@@ -1,0 +1,22 @@
+@import './base.css';
+
+a,
+.red {
+    text-decoration: none;
+    color: var(--color-main-accent);
+    transition: 0.4s;
+}
+
+body {
+    display: flex;
+    place-items: center;
+}
+
+#app {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr;
+    margin: 0rem;
+}
