@@ -1,5 +1,5 @@
 # The F1 Paddock
-A simple web app that serves Formula 1 driver information. 
+A simple web app that serves Formula 1 driver information. The web app is also web responsive.
 
 ## APIs and Frameworks used
 1. **Vue.js** - [link](https://vuejs.org/)
@@ -21,6 +21,7 @@ A simple web app that serves Formula 1 driver information.
 - Driver information does not directly contain all-time stats (race wins, championships, etc.), and constructor/team at the time.
 ### Wikipedia API related
 - Pictures of drivers depend on the existence of one in their respective Wikipedia articles.
+
 - There are some instances where a slight difference in the driver's name that causes their article to not be pulled up. Example: Albon's Wikipedia article from the API is `http://en.wikipedia.org/wiki/Alexander_Albon` and not `https://en.wikipedia.org/wiki/Alex_Albon` On Wikipedia it resolves to Alex Albon correctly, however, his photo does not show up from the API.
 - Due to the non-standard sizes of driver photos, some driver cards will appear very differently.
 
