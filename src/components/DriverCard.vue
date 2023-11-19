@@ -72,7 +72,7 @@ function returnAge(birth_date) {
     border-radius: 1rem;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 1024px) {
     .driver_card {
         flex-direction: column-reverse;
     }
