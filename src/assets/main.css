@@ -16,7 +16,7 @@ a,
     margin: 0rem;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 1024px) {
     #app {
         flex-direction: column;
         justify-content: start;
