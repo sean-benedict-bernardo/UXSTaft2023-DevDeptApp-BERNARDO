@@ -12,6 +12,7 @@ A simple web app that serves Formula 1 driver information.
    1.1 Logo retrieved from Wikipedia - [link](https://en.m.wikipedia.org/wiki/File:F1.svg)  
    1.2 Font retrieved from the F1 website - [font download link](https://www.formula1.com/etc/designs/fom-website/fonts/F1Regular/Formula1-Regular.ttf)  
 2. **Emojipedia** for the racecar favicon - [link](https://emojipedia.org/racing-car)
+3. **Flagpedia.net** for driver's national flags - [link](https://flagpedia.net/download/api)
 
 ## Known Limitations
 - The website as it is not yet created with web responsiveness in mind, hence, it is recommended to view it from a PC or at least an iPad.
