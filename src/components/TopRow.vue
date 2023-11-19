@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 const ribbon_links = ref([
-    { name: "README.md", link: "../../README.md" },
-    { name: "Source Code", link: "https://github.com" }
+    { name: "README.md", link: "https://github.com/sean-benedict-bernardo/UXSTaft2023-DevDeptApp-BERNARDO/blob/main/README.md" },
+    { name: "Source Code", link: "https://github.com/sean-benedict-bernardo/UXSTaft2023-DevDeptApp-BERNARDO" }
 ])
 
 </script>

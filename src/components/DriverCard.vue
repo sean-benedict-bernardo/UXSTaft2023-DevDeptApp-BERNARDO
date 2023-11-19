@@ -61,12 +61,24 @@ function returnAge(birth_date) {
     color: white;
     text-decoration: underline;
 }
+
 .driver_card a:hover {
     background-color: var(--vt-c-divider-dark-1);
 }
 
 .driver_card>img {
-    max-width: 30%;
+    max-height: 40vh;
+    object-fit: contain;
     border-radius: 1rem;
+}
+
+@media (max-width: 512px) {
+    .driver_card {
+        flex-direction: column-reverse;
+    }
+
+    .driver_card>img {
+        border-radius: 0;
+    }
 }
 </style>

@@ -74,7 +74,7 @@ async function fetchDriverPhoto(wikipedia_uri) {
     const wiki_pageid = Object.keys(http_response.query.pages);
     const obj = http_response.query.pages[wiki_pageid];
 
-    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "src/assets/driverphoto_unavailable.svg";
+    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "/src/assets/driverphoto_unavailable.svg";
 }
 
 async function renderCard(driverId) {
@@ -87,17 +87,6 @@ async function renderCard(driverId) {
 async function getDrivers(year) {
     let season_drivers = await fetchDrivers(year)
     driver_array.value = []
-
-    /* {
-        "driverId": "max_verstappen",
-        "permanentNumber": "33",
-        "code": "VER",
-        "url": "http:\/\/en.wikipedia.org\/wiki\/Max_Verstappen",
-        "givenName": "Max",
-        "familyName": "Verstappen",
-        "dateOfBirth": "1997-09-30",
-        "nationality": "Dutch"
-        } */
 
     for (let i = 0; i < season_drivers.length; i++) {
         let driver = season_drivers[i];
@@ -141,20 +130,22 @@ async function getDrivers(year) {
   line-height: 1.5;
 } */
 
-header {
-    width: 30vw;
-    height: 100vh;
-    padding: 3rem 0;
+header,
+main {
+    padding: 1rem 0.5rem;
 
     display: flex;
-    flex-direction: column;
     place-items: center;
+}
+
+header {
+    flex-direction: column;
+    width: 40vw;
+    height: 100vh;
 }
 
 main {
     width: 40vw;
-    padding: 3rem 0;
-    height: 100vh;
 }
 
 header>div {
@@ -170,6 +161,7 @@ header>div {
     margin: 0 5%;
     width: 100%;
     display: flex;
+    flex-direction: row;
     place-items: flex-start;
     align-items: center;
     flex-wrap: wrap;
@@ -204,5 +196,23 @@ header>div {
 /* Handle on hover */
 .driver_listitems::-webkit-scrollbar-thumb:hover {
     background: rgba(240, 0, 0, 0.514);
+}
+
+
+@media (max-width: 512px) {
+
+    header,
+    main {
+        width: auto;
+        height: fit-content;
+        padding: 1rem 0.5rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
 }
 </style>

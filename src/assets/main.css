@@ -7,11 +7,6 @@ a,
     transition: 0.4s;
 }
 
-body {
-    display: flex;
-    place-items: center;
-}
-
 #app {
     display: flex;
     align-items: flex-start;
@@ -19,4 +14,14 @@ body {
     justify-content: space-evenly;
     grid-template-columns: 1fr 1fr;
     margin: 0rem;
+}
+
+@media (max-width: 512px) {
+    #app {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+        margin-bottom: 30vh;
+    }
 }
