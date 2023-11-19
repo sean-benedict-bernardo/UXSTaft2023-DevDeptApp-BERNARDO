@@ -74,7 +74,7 @@ async function fetchDriverPhoto(wikipedia_uri) {
     const wiki_pageid = Object.keys(http_response.query.pages);
     const obj = http_response.query.pages[wiki_pageid];
 
-    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "./assets/driverphoto_unavailable.svg";
+    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "/src/assets/driverphoto_unavailable.svg";
 }
 
 async function renderCard(driverId) {
