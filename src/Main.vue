@@ -75,7 +75,7 @@ async function fetchDriverPhoto(wikipedia_uri) {
     const obj = http_response.query.pages[wiki_pageid];
 
     // returns source if json contains thumbnail image, passes string below for use within DriverCard.vue
-    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "../../src/assets/driverphoto_unavailable.svg";
+    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "../assets/driverphoto_unavailable.png";
 }
 
 async function renderCard(driverId) {
