@@ -74,7 +74,8 @@ async function fetchDriverPhoto(wikipedia_uri) {
     const wiki_pageid = Object.keys(http_response.query.pages);
     const obj = http_response.query.pages[wiki_pageid];
 
-    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "/src/assets/driverphoto_unavailable.svg";
+    // returns source if json contains thumbnail image, passes string below for use within DriverCard.vue
+    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "././src/assets/driverphoto_unavailable.svg";
 }
 
 async function renderCard(driverId) {
@@ -126,9 +127,6 @@ async function getDrivers(year) {
 </template>
 
 <style scoped>
-/* header {
-  line-height: 1.5;
-} */
 
 header,
 main {
@@ -182,11 +180,6 @@ header>div {
 .driver_listitems::-webkit-scrollbar {
     width: 20px;
 }
-
-/* Track */
-/* .driver_listitems::-webkit-scrollbar-track {
-    background: #f1f1f1;
-} */
 
 /* Handle */
 .driver_listitems::-webkit-scrollbar-thumb {
