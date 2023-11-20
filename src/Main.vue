@@ -75,7 +75,7 @@ async function fetchDriverPhoto(wikipedia_uri) {
     const obj = http_response.query.pages[wiki_pageid];
 
     // returns source if json contains thumbnail image, passes string below for use within DriverCard.vue
-    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "././src/assets/driverphoto_unavailable.svg";
+    return (Object.keys(obj).includes("thumbnail")) ? obj.thumbnail.source : "src/assets/driverphoto_unavailable.png";
 }
 
 async function renderCard(driverId) {
@@ -92,6 +92,11 @@ async function getDrivers(year) {
     for (let i = 0; i < season_drivers.length; i++) {
         let driver = season_drivers[i];
         let driver_iso3166 = driver_nationalities.find((e) => e.nationality == driver.nationality);
+
+        // Alex or Alexander, pick a lane
+        if (driver.code == "albon") {
+            driver.url = "https://en.wikipedia.org/wiki/Alex_Albon"
+        }
 
         driver.country_code = driver_iso3166.country_code
         driver.country_img = `https://flagcdn.com/${driver.country_code}.svg`
