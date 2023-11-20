@@ -95,8 +95,8 @@ async function getDrivers(year) {
         let driver_iso3166 = driver_nationalities.find((e) => e.nationality == driver.nationality);
 
         // Alex or Alexander, pick a lane
-        if (driver.code == "albon") {
-            driver.url = "https://en.wikipedia.org/wiki/Alex_Albon"
+        if (driver.driverId == "albon") {
+            driver.url = "http:\/\/en.wikipedia.org\/wiki\/Alex_Albon"
         }
 
         driver.country_code = driver_iso3166.country_code
